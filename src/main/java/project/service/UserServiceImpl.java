@@ -1,10 +1,10 @@
-package com.levin.spring.mvc_hibernate.service;
+package project.service;
 
-import com.levin.spring.mvc_hibernate.dao.UserDao;
-import com.levin.spring.mvc_hibernate.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import project.dao.UserDao;
+import project.entity.User;
 
 import java.util.List;
 

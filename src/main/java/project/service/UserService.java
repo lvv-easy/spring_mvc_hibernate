@@ -1,6 +1,6 @@
-package com.levin.spring.mvc_hibernate.service;
+package project.service;
 
-import com.levin.spring.mvc_hibernate.entity.User;
+import project.entity.User;
 
 import java.util.List;
 

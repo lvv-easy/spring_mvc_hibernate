@@ -1,6 +1,4 @@
-package com.levin.spring.mvc_hibernate.entity;
-
-import org.springframework.context.annotation.EnableMBeanExport;
+package project.entity;
 
 import javax.persistence.*;
 

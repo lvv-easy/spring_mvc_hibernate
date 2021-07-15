@@ -1,18 +1,18 @@
-package com.levin.spring.mvc_hibernate.dao;
+package project.dao;
 
-import com.levin.spring.mvc_hibernate.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.hibernate.Session;
 import org.springframework.stereotype.Repository;
-
+import project.entity.User;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
 @Repository
 public class UserDaoImpl implements UserDao{
 
-    @Autowired
+    @PersistenceContext
     private EntityManager entityManager;
 
     @Override
@@ -23,8 +23,8 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public void saveUser(User user) {
-
-        entityManager.persist(user);
+        Session session = entityManager.unwrap(Session.class);
+        session.saveOrUpdate(user);
     }
 
     @Override
